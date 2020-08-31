@@ -1,0 +1,70 @@
+2020-08-30 18:59:47.101 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-30 18:59:47.238 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-30 18:59:47.632 +03:00 [INF] Hosting environment: Development
+2020-08-30 18:59:47.632 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\Test_example\Test_example
+2020-08-30 18:59:48.191 +03:00 [INF] Request finished in 959.8243ms 200 text/html;charset=utf-8
+2020-08-30 18:59:49.286 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-30 18:59:49.456 +03:00 [INF] Request finished in 170.3115ms 200 application/json;charset=utf-8
+2020-08-30 19:00:25.446 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/params application/json 83
+2020-08-30 19:00:25.476 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostParams (Test_example)'
+2020-08-30 19:00:25.672 +03:00 [INF] Route matched with {action = "PostParams", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Test_example.Domain.Request]]] PostParams(Test_example.Domain.ParamsRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-30 19:00:25.826 +03:00 [INF] Send client_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6" and department_address: string1. "2020-08-30T19:00:25.8203442+03:00"
+2020-08-30 19:26:25.400 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-30 19:26:25.508 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-30 19:26:25.594 +03:00 [INF] Hosting environment: Development
+2020-08-30 19:26:25.594 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\Test_example\Test_example
+2020-08-30 19:26:25.795 +03:00 [INF] Request finished in 295.7671ms 200 text/html;charset=utf-8
+2020-08-30 19:26:26.230 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-30 19:26:26.532 +03:00 [INF] Request finished in 302.8516ms 200 application/json;charset=utf-8
+2020-08-30 20:26:32.448 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-30 20:26:32.524 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-30 20:26:32.610 +03:00 [INF] Hosting environment: Development
+2020-08-30 20:26:32.610 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\Test_example\Test_example
+2020-08-30 20:26:32.849 +03:00 [INF] Request finished in 333.758ms 200 text/html;charset=utf-8
+2020-08-30 20:26:33.950 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-30 20:26:34.191 +03:00 [INF] Request finished in 240.9219ms 200 application/json;charset=utf-8
+2020-08-30 20:33:15.721 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/add application/json 112
+2020-08-30 20:33:15.746 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-30 20:33:15.984 +03:00 [INF] Route matched with {action = "PostAdd", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] PostAdd(Test_example.Domain.ApiRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-30 20:33:16.135 +03:00 [INF] Send client_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6", department_address: string1, amount: 10, currency: str. "2020-08-30T20:33:16.1298438+03:00"
+2020-08-30 20:33:29.384 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2020-08-30 20:33:29.426 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostAdd (Test_example) in 13421.0934ms
+2020-08-30 20:33:29.426 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-30 20:33:29.426 +03:00 [INF] Request finished in 13708.3444ms 200 application/json; charset=utf-8
+2020-08-30 20:33:50.974 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/id application/json 53
+2020-08-30 20:33:50.986 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostId (Test_example)'
+2020-08-30 20:33:51.028 +03:00 [INF] Route matched with {action = "PostId", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Test_example.Domain.Request]] PostId(Test_example.Domain.IdRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-30 20:33:51.041 +03:00 [INF] Send request_id: 6c9cf9f9-a177-4d58-92c5-54674d2bc2e2. "2020-08-30T20:33:51.0393354+03:00"
+2020-08-30 20:34:00.196 +03:00 [INF] Executing ObjectResult, writing value of type 'Test_example.Domain.Request'.
+2020-08-30 20:34:00.231 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostId (Test_example) in 9202.4811ms
+2020-08-30 20:34:00.231 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostId (Test_example)'
+2020-08-30 20:34:00.231 +03:00 [INF] Request finished in 9257.9588ms 200 application/json; charset=utf-8
+2020-08-30 20:34:15.716 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/params application/json 83
+2020-08-30 20:34:15.717 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostParams (Test_example)'
+2020-08-30 20:34:15.744 +03:00 [INF] Route matched with {action = "PostParams", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Test_example.Domain.Request]]] PostParams(Test_example.Domain.ParamsRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-30 20:34:15.757 +03:00 [INF] Send client_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6" and department_address: string1. "2020-08-30T20:34:15.7563141+03:00"
+2020-08-30 20:34:23.011 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Test_example.Domain.Request, Test_example.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-08-30 20:34:23.013 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostParams (Test_example) in 7268.6614ms
+2020-08-30 20:34:23.013 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostParams (Test_example)'
+2020-08-30 20:34:23.014 +03:00 [INF] Request finished in 7297.6125ms 200 application/json; charset=utf-8
+2020-08-30 20:35:35.891 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/add application/json 103
+2020-08-30 20:35:35.892 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-30 20:35:35.893 +03:00 [INF] Route matched with {action = "PostAdd", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] PostAdd(Test_example.Domain.ApiRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-30 20:35:35.909 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2020-08-30 20:35:35.914 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostAdd (Test_example) in 20.3884ms
+2020-08-30 20:35:35.914 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-30 20:35:35.915 +03:00 [INF] Request finished in 23.9311ms 400 application/problem+json; charset=utf-8
+2020-08-30 20:36:01.497 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/add application/json 134
+2020-08-30 20:36:01.499 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-30 20:36:01.500 +03:00 [INF] Route matched with {action = "PostAdd", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] PostAdd(Test_example.Domain.ApiRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-30 20:36:01.504 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2020-08-30 20:36:01.505 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostAdd (Test_example) in 5.5467ms
+2020-08-30 20:36:01.506 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-30 20:36:01.506 +03:00 [INF] Request finished in 9.2617ms 400 application/problem+json; charset=utf-8
+2020-08-30 22:41:29.374 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-30 22:41:29.615 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-30 22:41:29.677 +03:00 [INF] Hosting environment: Development
+2020-08-30 22:41:29.677 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\Test_example\Test_example
+2020-08-30 22:41:29.923 +03:00 [INF] Request finished in 339.8936ms 200 text/html;charset=utf-8
+2020-08-30 22:41:30.447 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-30 22:41:30.825 +03:00 [INF] Request finished in 378.8917ms 200 application/json;charset=utf-8

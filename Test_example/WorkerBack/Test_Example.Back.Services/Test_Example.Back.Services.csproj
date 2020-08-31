@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Test_Example.Back.Data\Test_Example.Back.Data.csproj" />
+    <ProjectReference Include="..\Test_Example.Back.Domain\Test_Example.Back.Domain.csproj" />
+    <ProjectReference Include="..\Test_Example.Back.Messaging\Test_Example.Back.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>

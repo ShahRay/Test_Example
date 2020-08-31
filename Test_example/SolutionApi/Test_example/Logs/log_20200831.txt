@@ -1,0 +1,74 @@
+2020-08-31 09:50:07.403 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-31 09:50:07.614 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-31 09:50:07.706 +03:00 [INF] Hosting environment: Development
+2020-08-31 09:50:07.707 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\Test_example\Test_example
+2020-08-31 09:50:08.076 +03:00 [INF] Request finished in 472.1843ms 200 text/html;charset=utf-8
+2020-08-31 09:50:09.733 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-31 09:50:10.271 +03:00 [INF] Request finished in 551.1279ms 200 application/json;charset=utf-8
+2020-08-31 09:52:45.959 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/add application/json 113
+2020-08-31 09:52:46.004 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-31 09:52:46.194 +03:00 [INF] Route matched with {action = "PostAdd", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] PostAdd(Test_example.Domain.ApiRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-31 09:52:46.417 +03:00 [INF] Send client_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6", department_address: string, amount: 0, currency: string. "2020-08-31T09:52:46.4109807+03:00"
+2020-08-31 09:52:47.167 +03:00 [FTL] RabbitMQ server is OFF!
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> RabbitMQ.Client.Exceptions.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+   at RabbitMQ.Client.Framing.Impl.Connection.StartAndTune()
+   at RabbitMQ.Client.Framing.Impl.Connection.Open(Boolean insist)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IFrameHandler fh)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at Test_example.Messaging.Sender.RabbitMqSender.SendToRabbitMqAsync(String queueName, String message, String replyQueueName) in C:\Users\Dima\source\repos\Test_example\Test_example.Messaging\Sender\RabbitMqSender.cs:line 31
+2020-08-31 09:52:47.342 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2020-08-31 09:52:47.363 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostAdd (Test_example) in 1156.6797ms
+2020-08-31 09:52:47.363 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-31 09:52:47.366 +03:00 [INF] Request finished in 1407.2312ms 400 application/problem+json; charset=utf-8
+2020-08-31 10:00:04.812 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-31 10:00:05.016 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-31 10:00:05.094 +03:00 [INF] Hosting environment: Development
+2020-08-31 10:00:05.094 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\Test_example\Test_example
+2020-08-31 10:00:05.308 +03:00 [INF] Request finished in 303.5222ms 200 text/html;charset=utf-8
+2020-08-31 10:00:05.981 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-31 10:00:06.392 +03:00 [INF] Request finished in 411.3912ms 200 application/json;charset=utf-8
+2020-08-31 10:03:09.927 +03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44304/api/Start/add application/json 113
+2020-08-31 10:03:10.026 +03:00 [INF] Executing endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-31 10:03:10.198 +03:00 [INF] Route matched with {action = "PostAdd", controller = "Start"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] PostAdd(Test_example.Domain.ApiRequest) on controller Test_example.Controllers.StartController (Test_example).
+2020-08-31 10:03:10.309 +03:00 [INF] Send client_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6", department_address: string, amount: 0, currency: string. "2020-08-31T10:03:10.2995897+03:00"
+2020-08-31 10:03:11.138 +03:00 [ERR] Start receive again in 3 sec.
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'api_id_queue' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.IModelExensions.BasicConsume(IModel model, String queue, Boolean autoAck, IBasicConsumer consumer)
+   at Test_example.Messaging.Sender.RabbitMqSender.SendToRabbitMqAsync(String queueName, String message, String replyQueueName) in C:\Users\Dima\source\repos\Test_example\Test_example.Messaging\Sender\RabbitMqSender.cs:line 44
+2020-08-31 10:03:14.311 +03:00 [ERR] Test_Example.Back is OFF!
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'api_id_queue' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SessionBase.Transmit(OutgoingCommand& cmd)
+   at RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, ReadOnlyMemory`1 body)
+   at RabbitMQ.Client.Framing.Impl.Model._Private_BasicConsume(String queue, String consumerTag, Boolean noLocal, Boolean autoAck, Boolean exclusive, Boolean nowait, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.IModelExensions.BasicConsume(IModel model, String queue, Boolean autoAck, IBasicConsumer consumer)
+   at Test_example.Messaging.Sender.RabbitMqSender.SendToRabbitMqAsync(String queueName, String message, String replyQueueName) in C:\Users\Dima\source\repos\Test_example\Test_example.Messaging\Sender\RabbitMqSender.cs:line 53
+2020-08-31 10:03:14.453 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2020-08-31 10:03:14.486 +03:00 [INF] Executed action Test_example.Controllers.StartController.PostAdd (Test_example) in 4273.7392ms
+2020-08-31 10:03:14.487 +03:00 [INF] Executed endpoint 'Test_example.Controllers.StartController.PostAdd (Test_example)'
+2020-08-31 10:03:14.499 +03:00 [INF] Request finished in 4581.7713ms 400 application/problem+json; charset=utf-8
+2020-08-31 14:49:46.470 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-31 14:49:46.677 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-31 14:49:46.704 +03:00 [INF] Hosting environment: Development
+2020-08-31 14:49:46.705 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\for Git\Test_example\SolutionApi\Test_example
+2020-08-31 14:49:46.901 +03:00 [INF] Request finished in 234.2394ms 200 text/html;charset=utf-8
+2020-08-31 14:49:47.373 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-31 14:49:47.737 +03:00 [INF] Request finished in 364.9887ms 200 application/json;charset=utf-8
+2020-08-31 17:31:24.314 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-08-31 17:31:24.507 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/index.html  
+2020-08-31 17:31:24.514 +03:00 [INF] Hosting environment: Development
+2020-08-31 17:31:24.515 +03:00 [INF] Content root path: C:\Users\Dima\source\repos\for Git\Test_example\SolutionApi\Test_example
+2020-08-31 17:31:24.746 +03:00 [INF] Request finished in 246.6628ms 200 text/html;charset=utf-8
+2020-08-31 17:31:25.268 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44304/swagger/v1/swagger.json  
+2020-08-31 17:31:25.686 +03:00 [INF] Request finished in 422.9488ms 200 application/json;charset=utf-8

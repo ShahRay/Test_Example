@@ -1,0 +1,14 @@
+2020-08-31 09:50:56.018 +03:00 [ERR] RabbitMQ server is OFF!
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> RabbitMQ.Client.Exceptions.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+   at RabbitMQ.Client.Framing.Impl.Connection.StartAndTune()
+   at RabbitMQ.Client.Framing.Impl.Connection.Open(Boolean insist)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IFrameHandler fh)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at Test_Example.Back.Messaging.Receiver.RabbitMqReceiver.InitializeRabbitMqListener() in C:\Users\Dima\source\repos\Test_example\Test_Example.Back.Messaging\Receiver\RabbitMqReceiver.cs:line 49
