@@ -1,0 +1,48 @@
+CREATE DATABASE Test
+collate cyrillic_general_ci_as
+GO
+
+USE Test
+GO
+
+CREATE TABLE Request (Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(), ClientId UNIQUEIDENTIFIER, DepartmentAddress VARCHAR(200), Amount MONEY, Currency VARCHAR(20), ClientIp VARCHAR(15), RequestStatus VARCHAR(50), [DateTime] DATETIME2)
+GO
+
+CREATE PROC AddRequest @client_id UNIQUEIDENTIFIER, @department_address VARCHAR(200), @amount MONEY, @currency VARCHAR(20), @client_ip VARCHAR(15), @request_status VARCHAR(50), @date_time DATETIME2
+AS
+BEGIN
+INSERT INTO [Test].[dbo].[Request] OUTPUT inserted.Id VALUES(DEFAULT, @client_id, @department_address, @amount, @currency, @client_ip, @request_status, @date_time)
+END
+GO
+
+CREATE PROC GetRequestById @id UNIQUEIDENTIFIER
+AS
+BEGIN
+SELECT * FROM [Test].[dbo].[Request] WHERE Id = @id
+END
+GO
+
+CREATE PROC GetRequestsByParams @client_id UNIQUEIDENTIFIER, @department_address VARCHAR(200)
+AS
+BEGIN
+SELECT * FROM [Test].[dbo].[Request] WHERE ClientId = @client_id AND DepartmentAddress = @department_address
+END
+GO
+
+DECLARE @res UNIQUEIDENTIFIER
+EXEC AddRequest '43f5f9aa-1161-f798-5e46-26b03096dada', 'Железнодорожная пр., 932, Тверь, Доминика', 88.25, 'UAH', '187.125.25.234', 'deposit', '2020-02-16', @res OUTPUT
+PRINT @res
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '43f5f9aa-1161-f798-5e46-26b03096dada', 'Железнодорожная пр., 932, Тверь, Доминика', 221.86, 'USD', '56.21.94.123', 'payment', '2020-05-02');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '43f5f9aa-1161-f798-5e46-26b03096dada', 'Железнодорожная пр., 932, Тверь, Доминика', 407.95, 'EUR', '43.169.167.229', 'payment', '2019-10-24');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '0e8c314b-f768-b31b-01a8-b017bac8313e', 'пл. Первомайская, 198, Курск, Панама', 980.34, 'UAH', '64.43.54.253', 'deposit', '2019-11-09');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '0e8c314b-f768-b31b-01a8-b017bac8313e', 'пл. Первомайская, 198, Курск, Панама', 91.96, 'USD', '62.128.182.97', 'payment', '2020-06-17');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '0e8c314b-f768-b31b-01a8-b017bac8313e', 'пл. Первомайская, 198, Курск, Панама', 942.40, 'EUR', '75.31.104.114', 'payment', '2019-10-09');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '198ecdec-7997-2a1b-adff-c945b42c6412', 'Западная пл., 296, Пермь, Маршалловы Острова', 843.28, 'UAH', '88.81.39.133', 'withdrawal', '2020-03-11');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '198ecdec-7997-2a1b-adff-c945b42c6412', 'Западная пл., 296, Пермь, Маршалловы Острова', 90.10, 'USD', '163.18.43.76', 'withdrawal', '2020-03-24');
+INSERT [Test].[dbo].[Request] VALUES(DEFAULT, '198ecdec-7997-2a1b-adff-c945b42c6412', 'Западная пл., 296, Пермь, Маршалловы Острова', 755.51, 'EUR', '116.89.58.229', 'withdrawal', '2020-07-04');
+
+SELECT * FROM [Test].[dbo].[Request]
+
+EXEC GetRequestById '39C950A5-7979-4166-9AAD-165405D00E17'
+
+EXEC GetRequestsByParams '0e8c314b-f768-b31b-01a8-b017bac8313e', 'пл. Первомайская, 198, Курск, Панама'

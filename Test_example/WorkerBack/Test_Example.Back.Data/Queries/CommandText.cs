@@ -8,6 +8,6 @@ namespace Test_Example.Back.Data.Queries
 
         public string GetByParams => "GetRequestsByParams";
 
-        public string Add => "AddRequestNewNew";
+        public string Add => "AddRequest";
     }
 }

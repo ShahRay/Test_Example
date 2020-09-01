@@ -15,7 +15,7 @@ namespace Test_Example.Back.Messaging.Sender
         }
         public async Task SendToRabbitMqAsync(string queueName, string message)
         {
-            var factory = new ConnectionFactory() { HostName = _hostname};
+            var factory = new ConnectionFactory() { HostName = _hostname };
 
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())

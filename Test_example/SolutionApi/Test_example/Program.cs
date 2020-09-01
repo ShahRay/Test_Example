@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using Serilog.Events;
 
 namespace Test_example
 {
@@ -13,8 +14,9 @@ namespace Test_example
 
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
-            Log.Logger = new LoggerConfiguration().WriteTo
-                .File("Logs/log_.txt", rollingInterval: RollingInterval.Day)
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console(LogEventLevel.Debug)
+                .WriteTo.File("Logs/log_.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             return Host.CreateDefaultBuilder(args)
